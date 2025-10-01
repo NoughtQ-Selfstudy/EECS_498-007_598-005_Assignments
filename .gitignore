@@ -1,0 +1,7 @@
+# dot files
+.conda
+.MS_Store
+.vscode
+.cursor
+
+__pycache__
