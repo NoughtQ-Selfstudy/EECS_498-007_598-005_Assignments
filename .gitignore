@@ -5,3 +5,11 @@
 .cursor
 
 __pycache__
+
+# binary files
+*.tar.gz
+*.tar
+*.zip
+
+# A1
+cifar-10-batches-py

@@ -1,4 +1,6 @@
-# EECS 498-007/598-005 作业记录
+# UMich EECS 498-007/598-005 作业记录
+
+官网（安排页面，内含作业链接）：<https://web.eecs.umich.edu/~justincj/teaching/eecs498/WI2022/schedule.html>
 
 ## 进度
 
