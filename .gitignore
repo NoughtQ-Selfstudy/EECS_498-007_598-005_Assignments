@@ -13,3 +13,6 @@ __pycache__
 
 # A1
 cifar-10-batches-py
+
+# A2
+mnist_dataset
