@@ -567,14 +567,14 @@ def softmax_loss_vectorized(
     # Replace "pass" statement with your code
     num_train = X.shape[0]
 
-    scores = X.mm(W)                                                            # N * C
+    scores = X.mm(W)                                                     # N * C
     scores -= scores.max(dim=1, keepdim=True).values
     exp_scores = torch.exp(scores)
     exp_sum = torch.sum(exp_scores, dim=1).view(-1, 1)                   # N * 1
-    probs = exp_scores / exp_sum                                         # N * C
-    correct_score = scores[torch.arange(num_train), y].view(-1, 1)              # N * 1
+    correct_score = scores[torch.arange(num_train), y].view(-1, 1)       # N * 1
     loss = torch.sum(-correct_score + torch.log(exp_sum)) / num_train + reg * torch.sum(W * W)
     
+    probs = exp_scores / exp_sum                                         # N * C
     probs[torch.arange(num_train), y] -= 1.0
     dW = X.T.mm(probs) / num_train + 2 * reg * W 
     #############################################################################

@@ -12,7 +12,11 @@
             ||a - b||² = (a - b)ᵀ(a - b) = aᵀa + bᵀb - 2aᵀb
             ```
 
-- [ ] [A2](A2): Linear classifiers, Two-layer network
+- [x] [A2](A2): Linear classifiers, Two-layer network
+    - 两层网络
+        - `two_layer_net.ipynb` 中有部分代码必须在 CUDA 上运行，因为 MPS 计算精度不够（没有 `float64`），误差会很大
+        - 部分代码（`eecs598/a2_helpers.py`、`eecs598/data.py` 等）中的 CUDA 部分被我替换成 MPS，如果要在 N 卡上跑需要改回来
+    - MNIST 任务调参太玄学了，由于时间紧张，暂时不想做了
 - [ ] [A3](A3): Modular API, Convolutional Networks, Batch Normalization, Autograd
 - [ ] [A4](A4): Object detection
 - [ ] [A5](A5): RNNs, Image captioning, Transformers
